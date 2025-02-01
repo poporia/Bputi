@@ -1,0 +1,70 @@
+header{
+    background:repeating-linear-gradient(45deg,#8B4513,#8B4513 10px,#D2691E 10px,#D2691E 20px);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1{
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.main {
+    padding:auto;
+    color: #5a5c5f;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    margin-bottom: auto;
+}
+p{
+  font-size: 30px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 40px;
+}
+.ga{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    border-radius: 5px;/*角を丸くする*/
+}
+.setumei{   
+  text-align: center;
+}
+.pointo{   
+  text-align: left;
+}
+
+@keyframes infinity-scroll-left {
+from {
+  transform: translateX(0);
+}
+  to {
+  transform: translateX(-100%);
+}
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(100vw / 1);
+}
+.scroll-infinity__item>img {
+  width: 100%;
+}
