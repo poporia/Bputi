@@ -1,0 +1,119 @@
+/*文字コードはutf-8とする*/
+@charset "utf-8";
+/*すべての要素について、以下の設定を適用する*/
+*{
+margin: 0;/*上下左右の外側の余白を0とする*/
+padding:0;/*上下左右の内側の余白を0とする*/
+}
+
+/*header部に適用させるcss*/
+.header{
+    height: 56px;/*高さは56px*/
+    width: 100%;/*幅を最大まで下げる*/
+    box-shadow: 0 0 10px #f090a7;
+    background-color: #f190a7;/*下に影をつける*/
+    position: fixed;/*固定表示*/
+    top: 0;/*画面上部からの表示位置を0とする*/
+}
+.header-left{
+    float: left;/*回り込みを指定する(左)*/
+}
+.header-right{
+    float: right;/*回り込みを指定する(右)*/
+}
+.clear{
+    clear: both;/*回り込みを解除する(左右)*/
+}
+/*header-rightにあるaタグの設定*/
+.header-right a {
+    line-height: 56px;/*文字を縦方向中央に配置する*/
+    color:#5a5c5f;/*文字の色*/
+    margin-left:5px;/*文字の左側の余白*/
+    font-size: 16px;/*フォントサイズ*/
+    padding: 16px 5px;/*余白の設定　上下が16px　左右が5pxの余白をとる*/
+}
+.container{
+    max-width: 980px;/*最大の横幅を980とする*/
+    padding: 250px 60px;/*余白の設定　上下が0px　左右が30px　の余白をとる*/
+    text-align:left;
+}
+.main-visual{
+    padding-top: 140px;/*余白の設定　上から140pxの位置*/
+    padding-bottom: 592px;/*余白の設定　下から100pxの位置*/
+    background-image: url(詳しくはこちら.png);/*背景として画像を表示*/
+    background-size: 100%;/*背景画像が要素をぴったりと覆うように表示される*/
+    color:#f5f5f5;/*文字の色*/
+    text-align: left;/*文字の位置（センタリング）*/
+}
+.top-title{
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+.top-subtitle{
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+.top-text{
+    opacity: 0.9;/*透明度を0.9にする　0-1の間での設定*/
+}
+.main{
+    padding: 80px 0;
+    color: #5a5c5f;
+    text-align: center;
+}
+main h2{
+    margin-bottom: 25px;
+}
+.main-image{
+    width: 450px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 4px #b7b7b7;/*影の設定　横位置2px　縦位置2px ぼかしの距離4px 色は#b7b7b7*/
+    border-radius: 5px;/*角を丸くする*/
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  z-index: 10;
+  background-color:#FFF0F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1.5s 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading__logo {
+  opacity: 0;
+  animation: logo_fade 2s 0.5s forwards;
+  width: 300px;
+}
+
+@keyframes logo_fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
